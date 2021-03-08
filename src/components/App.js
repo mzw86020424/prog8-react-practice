@@ -11,13 +11,9 @@ class App extends React.Component {
     return (
       <div>
 
-        <h1>
-          {name}
-        </h1>
-        
-        <img src={Ninjawanko} alt= "Ninjawanko" />
-        <img src={MainLogo} alt= "logo image" />
-        
+    	  <h1>こんにちは、にんじゃわんこさん！</h1>
+    	  <button>ひつじ仙人</button>
+        <button>にんじゃわんこ</button>
       </div>
     );
   }
