@@ -12,8 +12,14 @@ class App extends React.Component {
       <div>
 
     	  <h1>こんにちは、にんじゃわんこさん！</h1>
-    	  <button>ひつじ仙人</button>
-        <button>にんじゃわんこ</button>
+        <button onClick={() => {
+          console.log("ひつじ仙人")
+        }}
+        >ひつじ仙人</button>
+        <button onClick={() => {
+          console.log("にんじゃわんこ")
+        }}
+        >にんじゃわんこ</button>
       </div>
     );
   }
