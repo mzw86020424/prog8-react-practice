@@ -5,19 +5,26 @@ import MainLogo from '../images/react-js-blog-header.png';
 import Ninjawanko from '../images/ninjawanko.png';
 
 class App extends React.Component {
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = { name: "にんじゃわんこ" };
+  }
+  handleClick(name) {
+    this.setState({name: name})
+  }
 
+  render() {
     const name = "にんじゃわんこ"
     return (
       <div>
 
-    	  <h1>こんにちは、にんじゃわんこさん！</h1>
+    	  <h1>こんにちは、{this.state.name}さん！</h1>
         <button onClick={() => {
-          console.log("ひつじ仙人")
+          this.handleClick("ひつじ仙人")
         }}
         >ひつじ仙人</button>
         <button onClick={() => {
-          console.log("にんじゃわんこ")
+          this.handleClick("にんじゃわんこ")
         }}
         >にんじゃわんこ</button>
       </div>
