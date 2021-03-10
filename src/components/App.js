@@ -7,10 +7,16 @@ import Ninjawanko from '../images/ninjawanko.png';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "にんじゃわんこ" };
+    this.state = { name: "にんじゃわんこ", count: 0 };
   }
   handleClick(name) {
     this.setState({name: name})
+  }
+  countUp() {
+    this.setState({count: this.state.count + 1})
+  }
+  countDown() {
+    this.setState({count: this.state.count - 1})
   }
 
   render() {
@@ -27,6 +33,15 @@ class App extends React.Component {
           this.handleClick("にんじゃわんこ")
         }}
         >にんじゃわんこ</button>
+
+        <h1>{this.state.count}</h1>
+        <button onClick={() => {
+          this.countUp()
+        }} >+</button>
+
+        <button onClick={() => {
+          this.countDown()
+        }} >-</button>
       </div>
     );
   }
